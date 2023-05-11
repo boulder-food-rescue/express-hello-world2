@@ -53,6 +53,7 @@ const html = `
   <body>
     <section>
       Hello from Render!
+      <iframe src="https://sandbox.fusionauth.io/oauth2/authorize?client_id=dfc9c31c-5560-4243-8a76-be55d73b29d1&response_type=code&redirect_uri=https%3A%2F%2Ffusionauth.io"></iframe>
     </section>
   </body>
 </html>
