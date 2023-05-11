@@ -53,7 +53,28 @@ const html = `
   <body>
     <section>
       Hello from Render!
-      <iframe src="https://sandbox.fusionauth.io/oauth2/authorize?client_id=dfc9c31c-5560-4243-8a76-be55d73b29d1&response_type=code&redirect_uri=https%3A%2F%2Ffusionauth.io"></iframe>
+      <script>
+        const url='https://sandbox.fusionauth.io/oauth2/authorize?client_id=dfc9c31c-5560-4243-8a76-be55d73b29d1&response_type=code&redirect_uri=https%3A%2F%2Ffusionauth.io';
+
+
+// Example POST method implementation:
+async function postData(url = "", data = {}) {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    redirect: "manual", // manual, *follow, error
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "include", // include, *same-origin, omit
+  });
+  return response.status;
+}
+
+postData(url).then((data) => {
+  console.log(data); 
+});
+
+      </script>
     </section>
   </body>
 </html>
